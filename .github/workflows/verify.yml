@@ -21,6 +21,13 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
       - run: node scripts/verify-export.mjs
+      - name: Verify browser interactions
+        env:
+          PORTFOLIO_BROWSER_TOOLS: ${{ runner.temp }}/portfolio-browser
+        run: |
+          npm install --prefix "$PORTFOLIO_BROWSER_TOOLS" --no-save --ignore-scripts playwright@1.58.2
+          node "$PORTFOLIO_BROWSER_TOOLS/node_modules/playwright/cli.js" install --with-deps --only-shell chromium
+          node --test scripts/verify-browser.mjs
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: portfolio-static-export
