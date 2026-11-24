@@ -9,6 +9,7 @@ const require = createRequire(resolve(process.env.PORTFOLIO_BROWSER_TOOLS ?? "."
 const { chromium } = require("playwright");
 
 const root = resolve("out");
+const basePath = process.env.PORTFOLIO_TEST_BASE_PATH ?? "";
 const types = {
   ".html": "text/html; charset=utf-8",
   ".css": "text/css; charset=utf-8",
@@ -24,7 +25,11 @@ before(async () => {
   server = createServer(async (request, response) => {
     try {
       const pathname = new URL(request.url, "http://127.0.0.1").pathname;
-      const file = resolve(root, "." + pathname + (pathname.endsWith("/") ? "index.html" : ""));
+      if (!pathname.startsWith(basePath + "/")) {
+        response.writeHead(404).end();
+        return;
+      }
+      const file = resolve(root, "." + pathname.slice(basePath.length) + (pathname.endsWith("/") ? "index.html" : ""));
       if (!file.startsWith(root + sep)) {
         response.writeHead(404).end();
         return;
@@ -39,7 +44,7 @@ before(async () => {
     server.once("error", reject);
     server.listen(0, "127.0.0.1", done);
   });
-  origin = "http://127.0.0.1:" + server.address().port;
+  origin = "http://127.0.0.1:" + server.address().port + basePath;
   browser = await chromium.launch();
 });
 

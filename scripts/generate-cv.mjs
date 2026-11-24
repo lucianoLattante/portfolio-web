@@ -8,16 +8,30 @@ const bytes = (text) => Buffer.byteLength(text, "latin1");
 const pdfString = (text) => text.replace(/[–—]/g, "-").replace(/[\\()]/g, "\\$&");
 const paragraphs = {
   es: {
-    skills: "Tecnologías",
-    tools: "Java, Spring Boot, Quarkus, REST, microservicios, MySQL, PostgreSQL, DynamoDB, AWS, Docker y Git.",
-    training: "Formación complementaria",
+    skills: "Tecnologías y calidad",
+    tools: "Java 8/11/17/21/25, Spring Boot, Quarkus, REST, MySQL, PostgreSQL, DynamoDB, AWS, Docker, Git, JUnit y Mockito.",
+    training: "Formación e idiomas",
     schools: "Aceleración Java - Alkemy (2022) · Bootcamp Full Stack - Egg Education (2021)",
+    languages: "Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET C1/C2 informado (2024).",
+    portfolio: "Proyectos personales",
+    projects: [
+      ["CommerceFlow", "Órdenes, stock y pagos simulados con outbox/inbox y Kafka.", "commerceflow"],
+      ["LedgerCore", "Transferencias simuladas y reversos compensatorios en PostgreSQL.", "ledgercore"],
+      ["KnowledgeAI", "Búsqueda privada y respuestas extractivas con Spring AI y pgvector.", "knowledgeai"],
+    ],
   },
   en: {
-    skills: "Technologies",
-    tools: "Java, Spring Boot, Quarkus, REST, microservices, MySQL, PostgreSQL, DynamoDB, AWS, Docker and Git.",
-    training: "Additional training",
+    skills: "Technologies and testing",
+    tools: "Java 8/11/17/21/25, Spring Boot, Quarkus, REST, MySQL, PostgreSQL, DynamoDB, AWS, Docker, Git, JUnit and Mockito.",
+    training: "Training and languages",
     schools: "Java acceleration program - Alkemy (2022) · Full Stack Bootcamp - Egg Education (2021)",
+    languages: "Native Spanish. English: advanced technical reading, conversational skills in development. Reported EF SET result C1/C2 (2024).",
+    portfolio: "Personal projects",
+    projects: [
+      ["CommerceFlow", "Orders, stock and simulated payments with outbox/inbox and Kafka.", "commerceflow"],
+      ["LedgerCore", "Simulated transfers and compensating reversals on PostgreSQL.", "ledgercore"],
+      ["KnowledgeAI", "Private retrieval and cited extracts with Spring AI and pgvector.", "knowledgeai"],
+    ],
   },
 };
 
@@ -40,13 +54,17 @@ function build(locale) {
   const content = career[locale];
   const detail = paragraphs[locale];
   const commands = ["0.14 0.31 0.21 rg 0 834 595 8 re f"];
+  const links = [];
   let y = 787;
-  function text(value, size = 11, font = "F1", color = "0.12 0.17 0.15", space = size + 5) {
+  function text(value, size = 11, font = "F1", color = "0.12 0.17 0.15", space = size + 4, url) {
     commands.push(`BT /${font} ${size} Tf ${color} rg 48 ${y} Td (${pdfString(value)}) Tj ET`);
+    if (url) {
+      links.push({ y, width: Math.min(499, value.length * size * 0.61), url });
+    }
     y -= space;
   }
   function section(label) {
-    y -= 15;
+    y -= 9;
     commands.push(`0.77 0.83 0.78 RG 48 ${y + 12} m 547 ${y + 12} l S`);
     text(label, 14, "F2", "0.14 0.31 0.21", 26);
   }
@@ -55,29 +73,37 @@ function build(locale) {
   text(content.role, 16, "F2", undefined, 27);
   text(`${content.location} · ${career.email}`, 10);
   text(career.linkedin.replace("https://", ""), 10);
-  text(career.github.replace("https://", ""), 10, "F1", undefined, 24);
+  text(career.github.replace("https://", ""), 10, "F1", undefined, 20);
   for (const line of wrap(content.intro)) text(line);
   section(content.experience);
   for (const [company, title, dates, summary] of content.jobs) {
     text(company, 13, "F2", undefined, 18);
     for (const line of wrap(`${title} · ${dates}`, 88)) text(line, 10, "F1", "0.29 0.38 0.34", 15);
     for (const line of wrap(summary)) text(line);
-    y -= 8;
+    y -= 5;
   }
   section(detail.skills);
   for (const line of wrap(detail.tools)) text(line);
+  section(detail.portfolio);
+  for (const [name, summary, repository] of detail.projects) {
+    text(name + " · " + summary, 10, "F1", undefined, 15, career.github + "/" + repository);
+  }
   section(detail.training);
   for (const line of wrap(detail.schools, 83)) text(line, 10);
+  for (const line of wrap(detail.languages, 90)) text(line, 10);
   if (y < 42) throw new Error("Résumé content exceeds the page");
   const stream = commands.join("\n") + "\n";
   const objects = [
     "<< /Type /Catalog /Pages 2 0 R >>",
     "<< /Type /Pages /Kids [3 0 R] /Count 1 >>",
-    `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>`,
+    `<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [${links.map((_, i) => (i + 7) + " 0 R").join(" ")}] >>`,
     "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>",
     "<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>",
     `<< /Length ${bytes(stream)} >>\nstream\n${stream}endstream`,
   ];
+  for (const link of links) {
+    objects.push(`<< /Type /Annot /Subtype /Link /Rect [48 ${link.y - 2} ${48 + link.width} ${link.y + 10}] /Border [0 0 0] /A << /S /URI /URI (${pdfString(link.url)}) >> >>`);
+  }
   let pdf = "%PDF-1.4\n%âãÏÓ\n";
   const offsets = objects.map((object, index) => {
     const offset = bytes(pdf);
