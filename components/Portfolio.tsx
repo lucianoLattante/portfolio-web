@@ -1,5 +1,6 @@
 import career from "../content/career.json";
 import { projects } from "../content/projects";
+import { localePath, resumePath } from "../content/site";
 import type { Locale } from "./Layout";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -31,14 +32,14 @@ const labels = {
 export function Portfolio({ locale }: { locale: Locale }) {
   const copy = labels[locale];
   const content = career[locale];
-  const pdf = `/cv/luciano-lattante-${locale}.pdf`;
+  const pdf = resumePath(locale);
 
   return (
     <>
       <a className="skip-link" href="#main">{copy.skip}</a>
       <header className="site-header">
         <div className="wrap header-inner">
-          <a className="wordmark" href={locale === "es" ? "/" : "/en/"} aria-label={career.name}>
+          <a className="wordmark" href={localePath(locale)} aria-label={career.name}>
             <span className="monogram" aria-hidden="true">LL</span><span className="wordmark-name">{career.name}</span>
           </a>
           <nav className="nav" aria-label={copy.nav}>
@@ -46,8 +47,8 @@ export function Portfolio({ locale }: { locale: Locale }) {
           </nav>
           <div className="controls">
             <nav className="languages" aria-label={copy.languages}>
-              <a href="/" hrefLang="es" lang="es" aria-label="Español" aria-current={locale === "es" ? "page" : undefined}>ES</a>
-              <a href="/en/" hrefLang="en" lang="en" aria-label="English" aria-current={locale === "en" ? "page" : undefined}>EN</a>
+              <a href={localePath("es")} hrefLang="es" lang="es" aria-label="Español" aria-current={locale === "es" ? "page" : undefined}>ES</a>
+              <a href={localePath("en")} hrefLang="en" lang="en" aria-label="English" aria-current={locale === "en" ? "page" : undefined}>EN</a>
             </nav>
             <ThemeToggle label={copy.light} />
           </div>

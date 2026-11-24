@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import career from "../content/career.json";
 
+import { localePath, siteOrigin, basePath } from "../content/site";
+
 export type Locale = "es" | "en";
 
 export function localeMetadata(locale: Locale): Metadata {
@@ -9,7 +11,14 @@ export function localeMetadata(locale: Locale): Metadata {
   return {
     title: `${career.name} · ${copy.role}`,
     description: copy.intro,
-    alternates: { languages: { es: "/", en: "/en/", "x-default": "/" } },
+    metadataBase: new URL(siteOrigin),
+    alternates: basePath ? {
+      canonical: localePath(locale),
+      languages: { es: localePath("es"), en: localePath("en"), "x-default": localePath("es") },
+    } : undefined,
+    openGraph: { title: `${career.name} · ${copy.role}`, description: copy.intro, type: "website",
+      locale: locale === "es" ? "es_AR" : "en_US",
+      url: basePath ? localePath(locale) : undefined },
   };
 }
 
