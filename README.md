@@ -22,3 +22,11 @@ node scripts/verify-export.mjs
 ```
 
 The static export is in `out/`. It contains both locales and the generated PDFs. A static host can serve this output without runtime secrets or APIs. Update the project evidence links when the verification baseline changes. Canonical site URLs can be configured once a public production domain is selected.
+
+The browser checks run against the static export and cover keyboard navigation, language changes, theme persistence, résumé downloads and the mobile reduced-motion layout. To run them after the build:
+
+```bash
+npm install --no-save --package-lock=false playwright@1.58.2
+npx playwright install --only-shell chromium
+node --test scripts/verify-browser.mjs
+```
