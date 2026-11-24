@@ -1,0 +1,80 @@
+{
+  "name": "Luciano Lattante",
+  "email": "lattanteluciano@gmail.com",
+  "github": "https://github.com/lucianoLattante",
+  "linkedin": "https://linkedin.com/in/luciano-lattante",
+  "es": {
+    "role": "Desarrollador Backend Java",
+    "location": "Santa Fe, Argentina",
+    "intro": "Desarrollo servicios backend con Java y Spring Boot, con foco en microservicios, APIs REST y bases de datos relacionales.",
+    "experience": "Experiencia profesional",
+    "projects": "Proyectos personales",
+    "jobs": [
+      [
+        "Mercado Libre",
+        "Desarrollador Backend",
+        "Mayo 2023 – actualidad",
+        "Desarrollo microservicios de órdenes de compra con Java y Spring Boot. Optimizo consultas y esquemas MySQL.",
+        "Java · Spring Boot · MySQL"
+      ],
+      [
+        "Experta / ASAP Consulting",
+        "Desarrollador Backend",
+        "Octubre 2022 – abril 2023",
+        "Desarrollé APIs REST y servicios para una aplicación de finanzas personales.",
+        "Quarkus · Node.js · AWS · DynamoDB · PostgreSQL"
+      ],
+      [
+        "Aufiero Informática",
+        "Desarrollador Full Stack",
+        "Mayo 2022 – agosto 2022",
+        "Desarrollé vistas y controladores con Grails y mantuve consultas y esquemas SQL.",
+        "Java · Groovy · Grails"
+      ],
+      [
+        "Casimiro Zbikoski",
+        "Desarrollador Full Stack",
+        "Diciembre 2021 – febrero 2022",
+        "Implementé funcionalidades full stack con Java y Spring, con persistencia en SQL Server.",
+        "Java · Spring Framework · SQL Server"
+      ]
+    ]
+  },
+  "en": {
+    "role": "Java Backend Engineer",
+    "location": "Santa Fe, Argentina",
+    "intro": "I build backend services with Java and Spring Boot, with a focus on microservices, REST APIs and relational databases.",
+    "experience": "Professional experience",
+    "projects": "Personal projects",
+    "jobs": [
+      [
+        "Mercado Libre",
+        "Backend Developer",
+        "May 2023 – present",
+        "I build purchase-order microservices with Java and Spring Boot, and optimize MySQL queries and schemas.",
+        "Java · Spring Boot · MySQL"
+      ],
+      [
+        "Experta / ASAP Consulting",
+        "Backend Developer",
+        "October 2022 – April 2023",
+        "Built REST APIs and services for a personal finance application.",
+        "Quarkus · Node.js · AWS · DynamoDB · PostgreSQL"
+      ],
+      [
+        "Aufiero Informática",
+        "Full Stack Developer",
+        "May 2022 – August 2022",
+        "Built Grails views and controllers, and maintained SQL queries and schemas.",
+        "Java · Groovy · Grails"
+      ],
+      [
+        "Casimiro Zbikoski",
+        "Full Stack Developer",
+        "December 2021 – February 2022",
+        "Delivered full-stack features with Java and Spring, with persistence in SQL Server.",
+        "Java · Spring Framework · SQL Server"
+      ]
+    ]
+  }
+}
