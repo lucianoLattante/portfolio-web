@@ -50,13 +50,13 @@ export const projects = [
     stack: ["Java 21", "Spring AI", "pgvector"],
     es: {
       scope: "Búsqueda documental",
-      description: "Búsqueda privada y respuestas extractivas con citas de un proveedor local, restringidas por organización y propietario.",
+      description: "Búsqueda privada y respuestas con citas. PostgreSQL aplica un cupo por propietario incluso cuando dos cargas compiten por el último lugar.",
       proof: "12 pruebas de integración con pgvector",
       caseStudyLabel: "Evaluación de recuperación",
     },
     en: {
       scope: "Document retrieval",
-      description: "Private document search and cited excerpts from a local provider, scoped to tenant and owner.",
+      description: "Private document search and cited answers. PostgreSQL enforces per-owner storage limits under concurrent uploads.",
       proof: "12 integration tests with pgvector",
       caseStudyLabel: "Retrieval evaluation",
     },
