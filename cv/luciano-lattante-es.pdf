@@ -7,7 +7,7 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R 9 0 R] >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R /Annots [7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R] >>
 endobj
 4 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
@@ -16,7 +16,7 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
 endobj
 6 0 obj
-<< /Length 3347 >>
+<< /Length 3843 >>
 stream
 0.14 0.31 0.21 rg 0 834 595 8 re f
 BT /F2 32 Tf 0.14 0.31 0.21 rg 48 787 Td (Luciano Lattante) Tj ET
@@ -24,63 +24,80 @@ BT /F2 16 Tf 0.12 0.17 0.15 rg 48 746 Td (Desarrollador Backend Java) Tj ET
 BT /F1 10 Tf 0.12 0.17 0.15 rg 48 719 Td (Santa Fe, Argentina · lattanteluciano@gmail.com) Tj ET
 BT /F1 10 Tf 0.12 0.17 0.15 rg 48 705 Td (linkedin.com/in/luciano-lattante) Tj ET
 BT /F1 10 Tf 0.12 0.17 0.15 rg 48 691 Td (github.com/lucianoLattante) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 671 Td (Desarrollo servicios backend con Java y Spring Boot, con foco en microservicios,) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 656 Td (APIs REST y bases de datos relacionales.) Tj ET
-0.77 0.83 0.78 RG 48 644 m 547 644 l S
-BT /F2 14 Tf 0.14 0.31 0.21 rg 48 632 Td (Experiencia profesional) Tj ET
-BT /F2 13 Tf 0.12 0.17 0.15 rg 48 606 Td (Mercado Libre) Tj ET
-BT /F1 10 Tf 0.29 0.38 0.34 rg 48 588 Td (Desarrollador Backend · Mayo 2023 - actualidad) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 573 Td (Desarrollo microservicios de órdenes de compra con Java y Spring Boot. Optimizo) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 558 Td (consultas y esquemas MySQL.) Tj ET
-BT /F2 13 Tf 0.12 0.17 0.15 rg 48 538 Td (Experta / ASAP Consulting) Tj ET
-BT /F1 10 Tf 0.29 0.38 0.34 rg 48 520 Td (Desarrollador Backend · Octubre 2022 - abril 2023) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 505 Td (Desarrollé APIs REST y servicios para una aplicación de finanzas personales.) Tj ET
-BT /F2 13 Tf 0.12 0.17 0.15 rg 48 485 Td (Aufiero Informática) Tj ET
-BT /F1 10 Tf 0.29 0.38 0.34 rg 48 467 Td (Desarrollador Full Stack · Mayo 2022 - agosto 2022) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 452 Td (Desarrollé vistas y controladores con Grails y mantuve consultas y esquemas SQL.) Tj ET
-BT /F2 13 Tf 0.12 0.17 0.15 rg 48 432 Td (Casimiro Zbikoski) Tj ET
-BT /F1 10 Tf 0.29 0.38 0.34 rg 48 414 Td (Desarrollador Full Stack · Diciembre 2021 - febrero 2022) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 399 Td (Implementé funcionalidades full stack con Java y Spring, con persistencia en SQL) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 384 Td (Server.) Tj ET
-0.77 0.83 0.78 RG 48 367 m 547 367 l S
-BT /F2 14 Tf 0.14 0.31 0.21 rg 48 355 Td (Tecnologías y calidad) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 329 Td (Java 8/11/17/21/25, Spring Boot, Quarkus, REST, MySQL, PostgreSQL, DynamoDB, AWS,) Tj ET
-BT /F1 11 Tf 0.12 0.17 0.15 rg 48 314 Td (Docker, Git, JUnit y Mockito.) Tj ET
-0.77 0.83 0.78 RG 48 302 m 547 302 l S
-BT /F2 14 Tf 0.14 0.31 0.21 rg 48 290 Td (Proyectos personales) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 264 Td (CommerceFlow · Órdenes, stock y pagos simulados con outbox/inbox y Kafka.) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 249 Td (LedgerCore · Transferencias simuladas y reversos compensatorios en PostgreSQL.) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 234 Td (KnowledgeAI · Búsqueda privada y respuestas extractivas con Spring AI y pgvector.) Tj ET
-0.77 0.83 0.78 RG 48 222 m 547 222 l S
-BT /F2 14 Tf 0.14 0.31 0.21 rg 48 210 Td (Formación e idiomas) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 184 Td (Aceleración Java - Alkemy \(2022\) · Bootcamp Full Stack - Egg Education \(2021\)) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 170 Td (Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET C1/C2) Tj ET
-BT /F1 10 Tf 0.12 0.17 0.15 rg 48 156 Td (informado \(2024\).) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 677 Td (lucianolattante.github.io/portfolio-web/) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 657 Td (Más de cuatro años de experiencia profesional en desarrollo de software. Trabajo) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 642 Td (con Java, Spring Boot, APIs REST y SQL.) Tj ET
+0.77 0.83 0.78 RG 48 630 m 547 630 l S
+BT /F2 14 Tf 0.14 0.31 0.21 rg 48 618 Td (Experiencia profesional) Tj ET
+BT /F2 13 Tf 0.12 0.17 0.15 rg 48 592 Td (Mercado Libre) Tj ET
+BT /F1 10 Tf 0.29 0.38 0.34 rg 48 574 Td (Desarrollador Backend · Mayo 2023 - actualidad) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 559 Td (Desarrollo microservicios Java/Spring Boot para órdenes de compra manuales y) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 544 Td (automáticas. Codiseñé una API para ajustar cantidades sugeridas antes de generar) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 529 Td (compras semanales. Optimizo MySQL y resuelvo incidentes de producción.) Tj ET
+BT /F2 13 Tf 0.12 0.17 0.15 rg 48 509 Td (Experta / ASAP Consulting) Tj ET
+BT /F1 10 Tf 0.29 0.38 0.34 rg 48 491 Td (Desarrollador Backend · Octubre 2022 - abril 2023) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 476 Td (Desarrollé APIs REST y servicios para una aplicación de finanzas personales.) Tj ET
+BT /F2 13 Tf 0.12 0.17 0.15 rg 48 456 Td (Aufiero Informática) Tj ET
+BT /F1 10 Tf 0.29 0.38 0.34 rg 48 438 Td (Desarrollador Full Stack · Mayo 2022 - agosto 2022) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 423 Td (Desarrollé vistas y controladores con Grails y mantuve consultas y esquemas SQL.) Tj ET
+BT /F2 13 Tf 0.12 0.17 0.15 rg 48 403 Td (Casimiro Zbikoski) Tj ET
+BT /F1 10 Tf 0.29 0.38 0.34 rg 48 385 Td (Desarrollador Full Stack · Diciembre 2021 - febrero 2022) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 370 Td (Implementé funcionalidades full stack con Java y Spring, con persistencia en SQL) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 355 Td (Server.) Tj ET
+0.77 0.83 0.78 RG 48 338 m 547 338 l S
+BT /F2 14 Tf 0.14 0.31 0.21 rg 48 326 Td (Tecnologías y calidad) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 300 Td (Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis,) Tj ET
+BT /F1 11 Tf 0.12 0.17 0.15 rg 48 285 Td (Docker, Git, JUnit, Mockito y Testcontainers.) Tj ET
+0.77 0.83 0.78 RG 48 273 m 547 273 l S
+BT /F2 14 Tf 0.14 0.31 0.21 rg 48 261 Td (Proyectos personales) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 235 Td (CommerceFlow · Reservas de stock e idempotencia en MySQL. Outbox/inbox con Kafka y pagos) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 221 Td (simulados.) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 207 Td (LedgerCore · Transferencias simuladas, reversos y roles PostgreSQL separados para migración) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 193 Td (y ejecución.) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 179 Td (KnowledgeAI · Búsqueda privada con Spring AI y pgvector, citas autorizadas y cupo) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 165 Td (concurrente por propietario.) Tj ET
+0.77 0.83 0.78 RG 48 154 m 547 154 l S
+BT /F2 14 Tf 0.14 0.31 0.21 rg 48 142 Td (Formación e idiomas) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 116 Td (Aceleración Java - Alkemy \(2022\) · Bootcamp Full Stack - Egg Education \(2021\)) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 102 Td (Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET) Tj ET
+BT /F1 10 Tf 0.12 0.17 0.15 rg 48 88 Td (informado \(2024\).) Tj ET
 endstream
 endobj
 7 0 obj
-<< /Type /Annot /Subtype /Link /Rect [48 262 493.3 274] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/commerceflow) >> >>
+<< /Type /Annot /Subtype /Link /Rect [48 703 243.2 715] /Border [0 0 0] /A << /S /URI /URI (https://linkedin.com/in/luciano-lattante) >> >>
 endobj
 8 0 obj
-<< /Type /Annot /Subtype /Link /Rect [48 247 523.8 259] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/ledgercore) >> >>
+<< /Type /Annot /Subtype /Link /Rect [48 689 206.6 701] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante) >> >>
 endobj
 9 0 obj
-<< /Type /Annot /Subtype /Link /Rect [48 232 542.0999999999999 244] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/knowledgeai) >> >>
+<< /Type /Annot /Subtype /Link /Rect [48 675 292 687] /Border [0 0 0] /A << /S /URI /URI (https://lucianolattante.github.io/portfolio-web/) >> >>
+endobj
+10 0 obj
+<< /Type /Annot /Subtype /Link /Rect [48 233 547 245] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/commerceflow) >> >>
+endobj
+11 0 obj
+<< /Type /Annot /Subtype /Link /Rect [48 205 547 217] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/ledgercore) >> >>
+endobj
+12 0 obj
+<< /Type /Annot /Subtype /Link /Rect [48 177 542.0999999999999 189] /Border [0 0 0] /A << /S /URI /URI (https://github.com/lucianoLattante/knowledgeai) >> >>
 endobj
 xref
-0 10
+0 13
 0000000000 65535 f 
 0000000015 00000 n 
 0000000064 00000 n 
 0000000121 00000 n 
-0000000285 00000 n 
-0000000382 00000 n 
-0000000484 00000 n 
-0000003882 00000 n 
-0000004044 00000 n 
-0000004204 00000 n 
+0000000306 00000 n 
+0000000403 00000 n 
+0000000505 00000 n 
+0000004399 00000 n 
+0000004554 00000 n 
+0000004703 00000 n 
+0000004864 00000 n 
+0000005025 00000 n 
+0000005184 00000 n 
 trailer
-<< /Size 10 /Root 1 0 R >>
+<< /Size 13 /Root 1 0 R >>
 startxref
-4377
+5358
 %%EOF
