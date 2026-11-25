@@ -6,7 +6,7 @@
   "es": {
     "role": "Desarrollador Backend Java",
     "location": "Santa Fe, Argentina",
-    "intro": "Desarrollo servicios backend con Java y Spring Boot, con foco en microservicios, APIs REST y bases de datos relacionales.",
+    "intro": "Más de cuatro años de experiencia profesional en desarrollo de software. Trabajo con Java, Spring Boot, APIs REST y SQL.",
     "experience": "Experiencia profesional",
     "projects": "Proyectos personales",
     "jobs": [
@@ -14,7 +14,7 @@
         "Mercado Libre",
         "Desarrollador Backend",
         "Mayo 2023 – actualidad",
-        "Desarrollo microservicios de órdenes de compra con Java y Spring Boot. Optimizo consultas y esquemas MySQL.",
+        "Desarrollo microservicios Java/Spring Boot para órdenes de compra manuales y automáticas. Codiseñé una API para ajustar cantidades sugeridas antes de generar compras semanales. Optimizo MySQL y resuelvo incidentes de producción.",
         "Java 17/21/25 · Spring Boot · MySQL"
       ],
       [
@@ -43,7 +43,7 @@
   "en": {
     "role": "Java Backend Engineer",
     "location": "Santa Fe, Argentina",
-    "intro": "I build backend services with Java and Spring Boot, with a focus on microservices, REST APIs and relational databases.",
+    "intro": "Over four years of professional software development experience. I build backend services with Java, Spring Boot, REST APIs, and SQL.",
     "experience": "Professional experience",
     "projects": "Personal projects",
     "jobs": [
@@ -51,7 +51,7 @@
         "Mercado Libre",
         "Backend Developer",
         "May 2023 – present",
-        "I build purchase-order microservices with Java and Spring Boot, and optimize MySQL queries and schemas.",
+        "Build Java/Spring Boot microservices for manual and automated purchase orders. Co-designed an API to adjust suggested quantities before weekly order generation. Optimize MySQL and troubleshoot production incidents.",
         "Java 17/21/25 · Spring Boot · MySQL"
       ],
       [

@@ -9,28 +9,28 @@ const pdfString = (text) => text.replace(/[–—]/g, "-").replace(/[\\()]/g, "\
 const paragraphs = {
   es: {
     skills: "Tecnologías y calidad",
-    tools: "Java 8/11/17/21/25, Spring Boot, Quarkus, REST, MySQL, PostgreSQL, DynamoDB, AWS, Docker, Git, JUnit y Mockito.",
+    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit, Mockito y Testcontainers.",
     training: "Formación e idiomas",
     schools: "Aceleración Java - Alkemy (2022) · Bootcamp Full Stack - Egg Education (2021)",
-    languages: "Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET C1/C2 informado (2024).",
+    languages: "Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET informado (2024).",
     portfolio: "Proyectos personales",
     projects: [
-      ["CommerceFlow", "Órdenes, stock y pagos simulados con outbox/inbox y Kafka.", "commerceflow"],
-      ["LedgerCore", "Transferencias simuladas y reversos compensatorios en PostgreSQL.", "ledgercore"],
-      ["KnowledgeAI", "Búsqueda privada y respuestas extractivas con Spring AI y pgvector.", "knowledgeai"],
+      ["CommerceFlow", "Reservas de stock e idempotencia en MySQL. Outbox/inbox con Kafka y pagos simulados.", "commerceflow"],
+      ["LedgerCore", "Transferencias simuladas, reversos y roles PostgreSQL separados para migración y ejecución.", "ledgercore"],
+      ["KnowledgeAI", "Búsqueda privada con Spring AI y pgvector, citas autorizadas y cupo concurrente por propietario.", "knowledgeai"],
     ],
   },
   en: {
     skills: "Technologies and testing",
-    tools: "Java 8/11/17/21/25, Spring Boot, Quarkus, REST, MySQL, PostgreSQL, DynamoDB, AWS, Docker, Git, JUnit and Mockito.",
+    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit, Mockito and Testcontainers.",
     training: "Training and languages",
     schools: "Java acceleration program - Alkemy (2022) · Full Stack Bootcamp - Egg Education (2021)",
-    languages: "Native Spanish. English: advanced technical reading, conversational skills in development. Reported EF SET result C1/C2 (2024).",
+    languages: "Native Spanish. English: advanced technical reading, spoken fluency in development. EF SET reported (2024).",
     portfolio: "Personal projects",
     projects: [
-      ["CommerceFlow", "Orders, stock and simulated payments with outbox/inbox and Kafka.", "commerceflow"],
-      ["LedgerCore", "Simulated transfers and compensating reversals on PostgreSQL.", "ledgercore"],
-      ["KnowledgeAI", "Private retrieval and cited extracts with Spring AI and pgvector.", "knowledgeai"],
+      ["CommerceFlow", "MySQL stock reservations and idempotency. Kafka outbox/inbox and simulated payments.", "commerceflow"],
+      ["LedgerCore", "Simulated transfers, reversals, and separate PostgreSQL migration and runtime roles.", "ledgercore"],
+      ["KnowledgeAI", "Private Spring AI and pgvector retrieval with authorized citations and concurrent per-owner quotas.", "knowledgeai"],
     ],
   },
 };
@@ -72,8 +72,10 @@ function build(locale) {
   text(career.name, 32, "F2", "0.14 0.31 0.21", 41);
   text(content.role, 16, "F2", undefined, 27);
   text(`${content.location} · ${career.email}`, 10);
-  text(career.linkedin.replace("https://", ""), 10);
-  text(career.github.replace("https://", ""), 10, "F1", undefined, 20);
+  text(career.linkedin.replace("https://", ""), 10, "F1", undefined, 14, career.linkedin);
+  text(career.github.replace("https://", ""), 10, "F1", undefined, 14, career.github);
+  const portfolioUrl = `https://lucianolattante.github.io/portfolio-web/${locale === "en" ? "en/" : ""}`;
+  text(portfolioUrl.replace("https://", ""), 10, "F1", undefined, 20, portfolioUrl);
   for (const line of wrap(content.intro)) text(line);
   section(content.experience);
   for (const [company, title, dates, summary] of content.jobs) {
@@ -86,7 +88,9 @@ function build(locale) {
   for (const line of wrap(detail.tools)) text(line);
   section(detail.portfolio);
   for (const [name, summary, repository] of detail.projects) {
-    text(name + " · " + summary, 10, "F1", undefined, 15, career.github + "/" + repository);
+    const [firstLine, ...continuation] = wrap(`${name} · ${summary}`, 91);
+    text(firstLine, 10, "F1", undefined, 14, `${career.github}/${repository}`);
+    for (const line of continuation) text(line, 10, "F1", undefined, 14);
   }
   section(detail.training);
   for (const line of wrap(detail.schools, 83)) text(line, 10);
