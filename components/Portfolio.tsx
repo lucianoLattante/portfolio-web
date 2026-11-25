@@ -100,6 +100,9 @@ export function Portfolio({ locale }: { locale: Locale }) {
                 <div className="project-links">
                   <a href={project.href} aria-label={`${copy.code}, ${project.name}`}>{copy.code}</a>
                   <a href={project.detail} aria-label={`${copy.design}, ${project.name}`}>{copy.design}</a>
+                  <a href={project.caseStudy} aria-label={`${project[locale].caseStudyLabel}, ${project.name}`}>
+                    {project[locale].caseStudyLabel}
+                  </a>
                 </div>
               </article>
             ))}
