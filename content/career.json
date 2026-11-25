@@ -14,7 +14,7 @@
         "Mercado Libre",
         "Desarrollador Backend",
         "Mayo 2023 – actualidad",
-        "Desarrollo microservicios de órdenes de compra con Java y Spring Boot. Optimizo consultas y esquemas MySQL.",
+        "Desarrollo microservicios Java/Spring Boot para órdenes de compra manuales y automáticas. Codiseñé una API para ajustar cantidades sugeridas antes de generar compras semanales. Optimizo MySQL y resuelvo incidentes de producción.",
         "Java 17/21/25 · Spring Boot · MySQL"
       ],
       [
@@ -51,7 +51,7 @@
         "Mercado Libre",
         "Backend Developer",
         "May 2023 – present",
-        "I build purchase-order microservices with Java and Spring Boot, and optimize MySQL queries and schemas.",
+        "Build Java/Spring Boot microservices for manual and automated purchase orders. Co-designed an API to adjust suggested quantities before weekly order generation. Optimize MySQL and troubleshoot production incidents.",
         "Java 17/21/25 · Spring Boot · MySQL"
       ],
       [

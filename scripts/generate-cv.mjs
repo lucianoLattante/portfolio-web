@@ -9,10 +9,10 @@ const pdfString = (text) => text.replace(/[–—]/g, "-").replace(/[\\()]/g, "\
 const paragraphs = {
   es: {
     skills: "Tecnologías y calidad",
-    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit y Testcontainers.",
+    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit, Mockito y Testcontainers.",
     training: "Formación e idiomas",
     schools: "Aceleración Java - Alkemy (2022) · Bootcamp Full Stack - Egg Education (2021)",
-    languages: "Español nativo. Inglés: lectura técnica avanzada, conversación intermedia (autoevaluación).",
+    languages: "Español nativo. Inglés: lectura técnica avanzada, conversación en desarrollo. EF SET informado (2024).",
     portfolio: "Proyectos personales",
     projects: [
       ["CommerceFlow", "Reservas de stock e idempotencia en MySQL. Outbox/inbox con Kafka y pagos simulados.", "commerceflow"],
@@ -22,10 +22,10 @@ const paragraphs = {
   },
   en: {
     skills: "Technologies and testing",
-    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit and Testcontainers.",
+    tools: "Java, Spring Boot, REST, MySQL, PostgreSQL, Quarkus, AWS, DynamoDB, Kafka, Redis, Docker, Git, JUnit, Mockito and Testcontainers.",
     training: "Training and languages",
     schools: "Java acceleration program - Alkemy (2022) · Full Stack Bootcamp - Egg Education (2021)",
-    languages: "Native Spanish. English: advanced technical reading and intermediate conversation (self-assessed).",
+    languages: "Native Spanish. English: advanced technical reading, spoken fluency in development. EF SET reported (2024).",
     portfolio: "Personal projects",
     projects: [
       ["CommerceFlow", "MySQL stock reservations and idempotency. Kafka outbox/inbox and simulated payments.", "commerceflow"],
