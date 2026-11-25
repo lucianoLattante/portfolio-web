@@ -122,6 +122,37 @@ test("both CV links download valid PDF files", async () => {
   });
 });
 
+test("both languages link each project to its CI and technical evidence", async () => {
+  const projects = [
+    ["CommerceFlow", "commerceflow", "45541230478", "CONTENTION.md",
+      "#pages-between-commits-and-concurrent-writes", "Experimento de paginación", "Pagination experiment"],
+    ["LedgerCore", "ledgercore", "45541202715", "DATABASE_ROLES.md",
+      "", "Roles de base de datos", "Database roles"],
+    ["KnowledgeAI", "knowledgeai", "45620226691", "RETRIEVAL_EVALUATION.md",
+      "", "Evaluación de recuperación", "Retrieval evaluation"],
+  ];
+  const github = "https://github.com";
+  await withPage(async page => {
+    for (const [route, language] of [["/", "es"], ["/en/", "en"]]) {
+      await page.goto(origin + route);
+      for (const [name, repo, run, doc, hash, spanish, english] of projects) {
+        const card = page.getByRole("article").filter({ has: page.getByRole("heading", { name, exact: true }) });
+        const path = "/lucianoLattante/" + repo;
+        assert.equal(await card.locator(".proof").getAttribute("href"), github + path + "/actions/runs/" + run);
+
+        const label = language === "es" ? spanish : english;
+        const link = card.getByRole("link", { name: label + ", " + name, exact: true });
+        assert.ok(await link.isVisible());
+        const target = new URL(await link.getAttribute("href"));
+        assert.equal(target.origin, github);
+        const match = target.pathname.match(/^(.*)\/blob\/([a-f0-9]{40})\/docs\/([^/]+)$/);
+        assert.ok(match);
+        assert.deepEqual([match[1], match[3], target.hash], [path, doc, hash]);
+      }
+    }
+  });
+});
+
 test("both languages fit a mobile viewport and respect reduced motion", async () => {
   await withPage(async page => {
     for (const route of ["/", "/en/"]) {
